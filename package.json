@@ -1,0 +1,22 @@
+{
+  "name": "jiraReportGenerator",
+  "version": "0.0.1",
+  "description": "Scripts to fetch data from JIRA and generate a consolidated report",
+  "main": "mineJira.js",
+  "scripts": {
+    "test": "node mineJira.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.paypal.com:mgawande/jiraReportGenerator"
+  },
+  "author": "mgawande",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "async": "~0.2.10",
+    "minimist": "0.0.8",
+    "nodemailer": "~0.6.1",
+    "dustjs-helpers": "~1.2.0",
+    "dustjs-linkedin": "~2.3.4"
+  }
+}

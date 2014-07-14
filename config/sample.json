@@ -1,0 +1,57 @@
+{
+  "data": [
+     {
+      "projectName": "SPRNETSOCIALDB",
+      "title": "Spring.NET Social Dropbox open issues",
+      "jiraHost": "jira.spring.io",
+      "path": "/rest/api/latest/search?jql=project%20in%20(\"Spring.NET%20Social%20Dropbox\")%20AND%20type%20%3D%20Bug",
+      "auth": null,
+      "ooslaFiltering": {
+        "criteria": {
+          "Blocker": "1.5",
+          "Major": "3",
+          "Critical": "3",
+          "Normal": "5",
+          "Minor": "200"
+        }
+      }
+    },
+    {
+      "projectName": "CodeHaus",
+      "title": "Code Haus  Minor Open Issues",
+      "jiraHost": "jira.codehaus.org",
+      "path": "/rest/api/latest/search?jql=issuetype%20%3D%20Bug%20AND%20createdDate%20>%20startOfMonth()%20AND%20type%20%3D%20Bug%20AND%20status%20%3D%20Open%20AND%20priority%20%3D%20Minor",
+      "auth": null,
+      "ooslaFiltering": {
+        "criteria": {
+          "Blocker": "1.5",
+          "Major": "3",
+          "Critical": "3",
+          "Normal": "5",
+          "Minor": "200"
+        }
+      }
+    }
+  ],
+  "generateReport": {
+    "dustTemplate": "templates/report.dust",
+    "templateData": {
+      "reportTitle": "JIRA consolidated bug report"
+    },
+    "reportName": "report.html"
+  },
+  "sendEmail": {
+    "fromEmail": "JIRA defect tracker <DefectTracker@paypal.com>",
+    "toEmail": [
+      "toUsername"
+    ],
+    "toEmailFilter": null,
+    "ccEmail": [
+      "ccUsername"
+    ],
+    "ccEmailFilter": null,
+    "emailExtension": "@example.com",
+    "subject": "GPF Bug status",
+    "addDateToSubject": true
+  }
+}

@@ -1,0 +1,75 @@
+<html>
+<head>
+<style type=text/css>
+h2,.info{
+text-align: center;
+}
+.query {
+font-style:italic;
+font-size:100%
+}
+.project {
+text-decoration:underline
+}
+.oosla {
+background-color:#E77471;
+}
+a:link {
+text-decoration:none;
+}
+table
+{
+border-collapse:collapse;
+}
+table, td
+{
+text-align:left;
+vertical-align:top;
+padding: 3;
+}
+th
+{
+color:white;
+background-color:black;
+vertical-align:middle;
+text-align:center;
+padding: 3;
+}
+td,th {
+border: 1px solid black;
+}
+</style>
+</head><body>
+<h2>{#templateData}{reportTitle}{/templateData}</h2>
+<div class = "info">Total {#count}{total} issues ({p1} P1, {p2} P2, {p3} P3, {p4} P4{/count})<br>
+	Please note bugs marked in red are out of SLA.</div></br>
+<table>
+<tr>
+<th>Project</th>
+<th>Key</th>
+<th>Summary</th>
+<th>Priority</th>
+<th>Status</th>
+<th>Assignee</th>
+<th>Reporter</th>
+<th>Last Updated</th>
+</tr>
+{#issueArray}
+<tr><td rowspan={totalIssues}><span class="project">{name}</span></br><span class="query">{queryType}</span></td>
+{#issues}
+{@if cond="{$idx} != 0"}
+<tr>
+{/if}
+<td{?oosla} class="oosla" {/oosla}><a href="{url}">{key}</a></td>
+<td{?oosla} class="oosla" {/oosla}>{summary}</td>
+<td{?oosla} class="oosla" {/oosla}>{priority}</td>
+<td{?oosla} class="oosla" {/oosla}>{status}</td>
+<td{?oosla} class="oosla" {/oosla}>{assignee}</td>
+<td{?oosla} class="oosla" {/oosla}>{reporter}</td>
+<td{?oosla} class="oosla" {/oosla}>{dateUpdated}</td>
+</tr>
+{/issues}
+{/issueArray}
+</table></br>
+</body>
+</html>
