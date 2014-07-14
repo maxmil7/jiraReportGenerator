@@ -9,14 +9,14 @@ jiraReportGenerator
 
 <a name="info"></a>This repository contains scripts to fetch data from multiple instances of JIRA, consolidate it and display it in a report. Optionally, the report can be automatically emailed. The scripts are written in [Node.js](http://nodejs.org) and [Dust.js](http://linkedin.github.io/dustjs/) is used as the templating language for the reports.
 
-The configuration for the report is driven by a JSON file which contains information like which JIRA instance to connect to, which query to use, who to send email to etc. A sample configuration file can be found [here](https://github.paypal.com/mgawande/jiraReportGenerator/blob/master/config/sample.json).
+The configuration for the report is driven by a JSON file which contains information like which JIRA instance to connect to, which query to use, who to send email to etc. A sample configuration file can be found [here](config/sample.json).
 
 
 
 ##<a name="process"></a>How do I generate a report? 
 
-* Install [Node](http://nodejs.org) then run the following command
- <p><pre>git clone git@github.paypal.com:mgawande/jiraReportGenerator
+* Install [Node.js](http://nodejs.org) then run the following command
+ <p><pre>git clone https://github.com/maxmil7/jiraReportGenerator.git
 cd jiraReportGenerator
 npm install</pre></p>
 * Go to config/sample.json and replace "toUsername" and "ccUsername" with the username of the person to email the report to.
